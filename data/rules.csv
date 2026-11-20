@@ -1,0 +1,3 @@
+version,cutoff,scale,live_from,live_until
+r1,50,raw-v1,1,36
+r2,56,composite-v2,37,74

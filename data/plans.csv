@@ -1,0 +1,4 @@
+plan,asof,version,cutoff,bandwidths,min_per_side,max_unknown,min_gain,min_jump,horizon,active_on,status
+p1,52,r1,50,4|8|12,28,0.22,0.03,0.20,14,56,pending
+p2,54,r2,60,4|8|12,28,0.22,0.03,0.20,14,60,pending
+p0,44,r1,50,4|8,22,0.24,0.02,0.15,14,46,executed
