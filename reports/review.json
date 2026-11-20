@@ -1,0 +1,2280 @@
+[
+  {
+    "plan": {
+      "plan": "p1",
+      "asof": 52,
+      "version": "r1",
+      "cutoff": 50,
+      "bandwidths": [
+        4,
+        8,
+        12
+      ],
+      "min_per_side": 28,
+      "max_unknown": 0.22,
+      "min_gain": 0.03,
+      "min_jump": 0.2,
+      "horizon": 14,
+      "active_on": 56,
+      "status": "pending"
+    },
+    "final_decision": "hold",
+    "reason_summary": "提交时点视图结论为 hold（带宽 [8, 12] 数值过闸但未结标签敏感性翻转，其余带宽未过闸；未知标签可使动作建议翻转，不得切换）；订正后当前视图结论为 hold（带宽 [8, 12] 数值过闸但未结标签敏感性翻转，其余带宽未过闸；未知标签可使动作建议翻转，不得切换）；存在改变估计口径的证据订正（o0029）",
+    "scope_ok": true,
+    "scope_detail": {
+      "rule_scale": "raw-v1",
+      "plan_cutoff": "50",
+      "rule_cutoff": "50"
+    },
+    "submission": {
+      "asof": 52,
+      "n_mature": 680,
+      "n_mature_in_window": 453,
+      "band_verdicts": [
+        {
+          "bandwidth": 4,
+          "passed": false,
+          "failures": [
+            "min_gain：争议下降幅度需 >= 0.03，ITT 实际 -0.065"
+          ],
+          "comparison": {
+            "bandwidth": 4,
+            "above": {
+              "n": 90,
+              "mean": 0.2,
+              "unknown": 5,
+              "unknown_rate": 0.05555555555555555,
+              "shown": 72,
+              "show_rate": 0.8,
+              "clusters": 38
+            },
+            "below": {
+              "n": 60,
+              "mean": 0.1346153846153846,
+              "unknown": 8,
+              "unknown_rate": 0.13333333333333333,
+              "shown": 1,
+              "show_rate": 0.016666666666666666,
+              "clusters": 29
+            },
+            "diff": 0.06538461538461537,
+            "cluster_se": 0.06687416094594184,
+            "z": 0.9777261420516281,
+            "p_value": 0.3282097886486648,
+            "ci_low": -0.06568874006943062,
+            "ci_high": 0.19645797083866137,
+            "n_clusters": 40,
+            "show_jump": 0.7833333333333333,
+            "shown_group": {
+              "n": 69,
+              "mean": 0.15942028985507245,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 69,
+              "show_rate": 1.0,
+              "clusters": 37
+            },
+            "notshown_group": {
+              "n": 68,
+              "mean": 0.19117647058823528,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 31
+            },
+            "observed_gap": -0.03175618073316283
+          },
+          "gate_values": {
+            "n_above": 90,
+            "n_below": 60,
+            "unknown_rate_above": 0.05555555555555555,
+            "unknown_rate_below": 0.13333333333333333,
+            "show_rate_above": 0.8,
+            "show_rate_below": 0.016666666666666666,
+            "show_jump": 0.7833333333333333,
+            "itt_gain": -0.0653846153846154,
+            "p_value": 0.3282097886486648
+          },
+          "worst_case_gain": -0.12777777777777777,
+          "best_case_gain": 0.061111111111111116,
+          "label_flips": true
+        },
+        {
+          "bandwidth": 8,
+          "passed": true,
+          "failures": [],
+          "comparison": {
+            "bandwidth": 8,
+            "above": {
+              "n": 178,
+              "mean": 0.1952662721893491,
+              "unknown": 9,
+              "unknown_rate": 0.05056179775280899,
+              "shown": 143,
+              "show_rate": 0.8033707865168539,
+              "clusters": 40
+            },
+            "below": {
+              "n": 132,
+              "mean": 0.25,
+              "unknown": 12,
+              "unknown_rate": 0.09090909090909091,
+              "shown": 6,
+              "show_rate": 0.045454545454545456,
+              "clusters": 40
+            },
+            "diff": -0.05473372781065089,
+            "cluster_se": 0.05844946012802931,
+            "z": -0.9364282867756284,
+            "p_value": 0.3490527195735267,
+            "ci_low": -0.16929466966158835,
+            "ci_high": 0.059827214040286555,
+            "n_clusters": 40,
+            "show_jump": 0.7579162410623085,
+            "shown_group": {
+              "n": 141,
+              "mean": 0.1773049645390071,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 141,
+              "show_rate": 1.0,
+              "clusters": 40
+            },
+            "notshown_group": {
+              "n": 148,
+              "mean": 0.25675675675675674,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 39
+            },
+            "observed_gap": -0.07945179221774964
+          },
+          "gate_values": {
+            "n_above": 178,
+            "n_below": 132,
+            "unknown_rate_above": 0.05056179775280899,
+            "unknown_rate_below": 0.09090909090909091,
+            "show_rate_above": 0.8033707865168539,
+            "show_rate_below": 0.045454545454545456,
+            "show_jump": 0.7579162410623085,
+            "itt_gain": 0.05473372781065089,
+            "p_value": 0.3490527195735267
+          },
+          "worst_case_gain": -0.00868232890704801,
+          "best_case_gain": 0.13278855975485188,
+          "label_flips": true
+        },
+        {
+          "bandwidth": 12,
+          "passed": true,
+          "failures": [],
+          "comparison": {
+            "bandwidth": 12,
+            "above": {
+              "n": 255,
+              "mean": 0.17427385892116182,
+              "unknown": 14,
+              "unknown_rate": 0.054901960784313725,
+              "shown": 200,
+              "show_rate": 0.7843137254901961,
+              "clusters": 40
+            },
+            "below": {
+              "n": 198,
+              "mean": 0.23204419889502761,
+              "unknown": 17,
+              "unknown_rate": 0.08585858585858586,
+              "shown": 9,
+              "show_rate": 0.045454545454545456,
+              "clusters": 40
+            },
+            "diff": -0.05777033997386577,
+            "cluster_se": 0.04222965171434834,
+            "z": -1.368004177837848,
+            "p_value": 0.17131076838432246,
+            "ci_low": -0.1405404573339885,
+            "ci_high": 0.02499977738625697,
+            "n_clusters": 40,
+            "show_jump": 0.7388591800356507,
+            "shown_group": {
+              "n": 197,
+              "mean": 0.15736040609137056,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 197,
+              "show_rate": 1.0,
+              "clusters": 40
+            },
+            "notshown_group": {
+              "n": 225,
+              "mean": 0.23555555555555555,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 40
+            },
+            "observed_gap": -0.07819514946418499
+          },
+          "gate_values": {
+            "n_above": 255,
+            "n_below": 198,
+            "unknown_rate_above": 0.054901960784313725,
+            "unknown_rate_below": 0.08585858585858586,
+            "show_rate_above": 0.7843137254901961,
+            "show_rate_below": 0.045454545454545456,
+            "show_jump": 0.7388591800356507,
+            "itt_gain": 0.0577703399738658,
+            "p_value": 0.17131076838432246
+          },
+          "worst_case_gain": -0.007486631016042772,
+          "best_case_gain": 0.13327391562685678,
+          "label_flips": true
+        }
+      ],
+      "numeric_passed_bands": [
+        8,
+        12
+      ],
+      "fully_passed_bands": [],
+      "view_decision": "hold",
+      "view_reason": "带宽 [8, 12] 数值过闸但未结标签敏感性翻转，其余带宽未过闸；未知标签可使动作建议翻转，不得切换",
+      "heaping": {
+        "even_only": false,
+        "near_below": 31,
+        "near_above": 41,
+        "near_ratio": 1.323
+      },
+      "covariate_balance_bw8": {
+        "price_band": [
+          2.0786516853932584,
+          2.037878787878788
+        ],
+        "first_purchase": [
+          0.17415730337078653,
+          0.22727272727272727
+        ]
+      },
+      "merchant_overlap": [
+        40,
+        40
+      ],
+      "mismatched_receipts_visible": [
+        "o0088"
+      ],
+      "score_reviews_excluded": [
+        "o0029",
+        "o0088"
+      ],
+      "audit": [
+        "事后复核分数 o0029、o0088 仅供后续业务处置，未改变任何订单的资格侧或窗口归属",
+        "回执版本异常：o0088 在 asof=52 的有效回执标注为 r2（下单版本 r1）；按'版本不符≠无展示'保留订单，shown=1",
+        "asof=52 带宽 4 未过闸：min_gain：争议下降幅度需 >= 0.03，ITT 实际 -0.065",
+        "asof=52 带宽 8 数值闸口已过，但未结标签极端赋值下增益低至 -0.009（门槛 0.03），未知标签可使建议翻转",
+        "asof=52 带宽 12 数值闸口已过，但未结标签极端赋值下增益低至 -0.007（门槛 0.03），未知标签可使建议翻转"
+      ]
+    },
+    "current": {
+      "asof": 91,
+      "n_mature": 680,
+      "n_mature_in_window": 453,
+      "band_verdicts": [
+        {
+          "bandwidth": 4,
+          "passed": false,
+          "failures": [
+            "min_gain：争议下降幅度需 >= 0.03，ITT 实际 -0.061"
+          ],
+          "comparison": {
+            "bandwidth": 4,
+            "above": {
+              "n": 90,
+              "mean": 0.20689655172413793,
+              "unknown": 3,
+              "unknown_rate": 0.03333333333333333,
+              "shown": 72,
+              "show_rate": 0.8,
+              "clusters": 38
+            },
+            "below": {
+              "n": 60,
+              "mean": 0.14545454545454545,
+              "unknown": 5,
+              "unknown_rate": 0.08333333333333333,
+              "shown": 1,
+              "show_rate": 0.016666666666666666,
+              "clusters": 29
+            },
+            "diff": 0.06144200626959245,
+            "cluster_se": 0.05950851324595819,
+            "z": 1.0324910322602554,
+            "p_value": 0.30184214653525676,
+            "ci_low": -0.05519467969248559,
+            "ci_high": 0.1780786922316705,
+            "n_clusters": 40,
+            "show_jump": 0.7833333333333333,
+            "shown_group": {
+              "n": 71,
+              "mean": 0.16901408450704225,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 71,
+              "show_rate": 1.0,
+              "clusters": 37
+            },
+            "notshown_group": {
+              "n": 71,
+              "mean": 0.19718309859154928,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 31
+            },
+            "observed_gap": -0.028169014084507032
+          },
+          "gate_values": {
+            "n_above": 90,
+            "n_below": 60,
+            "unknown_rate_above": 0.03333333333333333,
+            "unknown_rate_below": 0.08333333333333333,
+            "show_rate_above": 0.8,
+            "show_rate_below": 0.016666666666666666,
+            "show_jump": 0.7833333333333333,
+            "itt_gain": -0.06144200626959248,
+            "p_value": 0.30184214653525676
+          },
+          "worst_case_gain": -0.1,
+          "best_case_gain": 0.016666666666666663,
+          "label_flips": true
+        },
+        {
+          "bandwidth": 8,
+          "passed": true,
+          "failures": [],
+          "comparison": {
+            "bandwidth": 8,
+            "above": {
+              "n": 178,
+              "mean": 0.19653179190751446,
+              "unknown": 5,
+              "unknown_rate": 0.028089887640449437,
+              "shown": 143,
+              "show_rate": 0.8033707865168539,
+              "clusters": 40
+            },
+            "below": {
+              "n": 132,
+              "mean": 0.25806451612903225,
+              "unknown": 8,
+              "unknown_rate": 0.06060606060606061,
+              "shown": 6,
+              "show_rate": 0.045454545454545456,
+              "clusters": 40
+            },
+            "diff": -0.06153272422151779,
+            "cluster_se": 0.05597202746957869,
+            "z": -1.0993477814424606,
+            "p_value": 0.2716163983014348,
+            "ci_low": -0.17123789806189202,
+            "ci_high": 0.048172449618856444,
+            "n_clusters": 40,
+            "show_jump": 0.7579162410623085,
+            "shown_group": {
+              "n": 145,
+              "mean": 0.1793103448275862,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 145,
+              "show_rate": 1.0,
+              "clusters": 40
+            },
+            "notshown_group": {
+              "n": 152,
+              "mean": 0.2631578947368421,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 39
+            },
+            "observed_gap": -0.08384754990925589
+          },
+          "gate_values": {
+            "n_above": 178,
+            "n_below": 132,
+            "unknown_rate_above": 0.028089887640449437,
+            "unknown_rate_below": 0.06060606060606061,
+            "show_rate_above": 0.8033707865168539,
+            "show_rate_below": 0.045454545454545456,
+            "show_jump": 0.7579162410623085,
+            "itt_gain": 0.06153272422151779,
+            "p_value": 0.2716163983014348
+          },
+          "worst_case_gain": 0.023323118828736805,
+          "best_case_gain": 0.11201906707524686,
+          "label_flips": true
+        },
+        {
+          "bandwidth": 12,
+          "passed": true,
+          "failures": [],
+          "comparison": {
+            "bandwidth": 12,
+            "above": {
+              "n": 255,
+              "mean": 0.17813765182186234,
+              "unknown": 8,
+              "unknown_rate": 0.03137254901960784,
+              "shown": 200,
+              "show_rate": 0.7843137254901961,
+              "clusters": 40
+            },
+            "below": {
+              "n": 198,
+              "mean": 0.24468085106382978,
+              "unknown": 10,
+              "unknown_rate": 0.050505050505050504,
+              "shown": 9,
+              "show_rate": 0.045454545454545456,
+              "clusters": 40
+            },
+            "diff": -0.06654319924196739,
+            "cluster_se": 0.040016887886706515,
+            "z": -1.6628779187017397,
+            "p_value": 0.09633687529140245,
+            "ci_low": -0.14497629949991214,
+            "ci_high": 0.01188990101597738,
+            "n_clusters": 40,
+            "show_jump": 0.7388591800356507,
+            "shown_group": {
+              "n": 202,
+              "mean": 0.15841584158415842,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 202,
+              "show_rate": 1.0,
+              "clusters": 40
+            },
+            "notshown_group": {
+              "n": 233,
+              "mean": 0.24892703862660945,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 40
+            },
+            "observed_gap": -0.09051119704245103
+          },
+          "gate_values": {
+            "n_above": 255,
+            "n_below": 198,
+            "unknown_rate_above": 0.03137254901960784,
+            "unknown_rate_below": 0.050505050505050504,
+            "show_rate_above": 0.7843137254901961,
+            "show_rate_below": 0.045454545454545456,
+            "show_jump": 0.7388591800356507,
+            "itt_gain": 0.06654319924196744,
+            "p_value": 0.09633687529140245
+          },
+          "worst_case_gain": 0.028401663695781343,
+          "best_case_gain": 0.11027926322043968,
+          "label_flips": true
+        }
+      ],
+      "numeric_passed_bands": [
+        8,
+        12
+      ],
+      "fully_passed_bands": [],
+      "view_decision": "hold",
+      "view_reason": "带宽 [8, 12] 数值过闸但未结标签敏感性翻转，其余带宽未过闸；未知标签可使动作建议翻转，不得切换",
+      "heaping": {
+        "even_only": false,
+        "near_below": 31,
+        "near_above": 41,
+        "near_ratio": 1.323
+      },
+      "covariate_balance_bw8": {
+        "price_band": [
+          2.0786516853932584,
+          2.037878787878788
+        ],
+        "first_purchase": [
+          0.17415730337078653,
+          0.22727272727272727
+        ]
+      },
+      "merchant_overlap": [
+        40,
+        40
+      ],
+      "mismatched_receipts_visible": [],
+      "score_reviews_excluded": [
+        "o0029",
+        "o0088"
+      ],
+      "audit": [
+        "事后复核分数 o0029、o0088 仅供后续业务处置，未改变任何订单的资格侧或窗口归属",
+        "asof=91 带宽 4 未过闸：min_gain：争议下降幅度需 >= 0.03，ITT 实际 -0.061",
+        "asof=91 带宽 8 数值闸口已过，但未结标签极端赋值下增益低至 0.023（门槛 0.03），未知标签可使建议翻转",
+        "asof=91 带宽 12 数值闸口已过，但未结标签极端赋值下增益低至 0.028（门槛 0.03），未知标签可使建议翻转"
+      ]
+    },
+    "evidence_corrections": [
+      {
+        "order": "o0029",
+        "table": "outcomes",
+        "revision_before": 1,
+        "revision_after": 2,
+        "known_after": 54,
+        "description": "售后由 rev1（state=appeal）订正为 rev2（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0088",
+        "table": "receipts",
+        "revision_before": 1,
+        "revision_after": 2,
+        "known_after": 53,
+        "description": "回执由 rev1（版本 r2，shown=1，reason=shown）订正为 rev2（版本 r1，shown=1，reason=shown）；订单资格侧不变（r1 分数 53≥ cutoff 50）",
+        "alters_estimate": false
+      }
+    ],
+    "late_arrivals": [
+      {
+        "order": "o0101",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0134",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0167",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0237",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0270",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0271",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 55,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0373",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0439",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0543",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 55,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0645",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0678",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0679",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 55,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      }
+    ],
+    "cutoff_jump_diagnostic": null,
+    "audit": [
+      "证据订正（outcomes）：o0029 售后由 rev1（state=appeal）订正为 rev2（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响；影响：改变估计口径",
+      "证据订正（receipts）：o0088 回执由 rev1（版本 r2，shown=1，reason=shown）订正为 rev2（版本 r1，shown=1，reason=shown）；订单资格侧不变（r1 分数 53≥ cutoff 50）；影响：不改变展示与资格，仅消除数据质量标记",
+      "另有 12 条 rev1 记录在提交 asof 之后才到达（资料各自按时到达的正常情形），已由成熟度窗口与 asof 视图处理，不计为失效证据。",
+      "事后复核分数 o0029、o0088 仅供后续业务处置，未改变任何订单的资格侧或窗口归属",
+      "回执版本异常：o0088 在 asof=52 的有效回执标注为 r2（下单版本 r1）；按'版本不符≠无展示'保留订单，shown=1",
+      "asof=52 带宽 4 未过闸：min_gain：争议下降幅度需 >= 0.03，ITT 实际 -0.065",
+      "asof=52 带宽 8 数值闸口已过，但未结标签极端赋值下增益低至 -0.009（门槛 0.03），未知标签可使建议翻转",
+      "asof=52 带宽 12 数值闸口已过，但未结标签极端赋值下增益低至 -0.007（门槛 0.03），未知标签可使建议翻转",
+      "事后复核分数 o0029、o0088 仅供后续业务处置，未改变任何订单的资格侧或窗口归属",
+      "asof=91 带宽 4 未过闸：min_gain：争议下降幅度需 >= 0.03，ITT 实际 -0.061",
+      "asof=91 带宽 8 数值闸口已过，但未结标签极端赋值下增益低至 0.023（门槛 0.03），未知标签可使建议翻转",
+      "asof=91 带宽 12 数值闸口已过，但未结标签极端赋值下增益低至 0.028（门槛 0.03），未知标签可使建议翻转",
+      "待生效切换未获双视图一致支持，或依赖的证据已被订正，不能照常生效；维持旧规则。"
+    ]
+  },
+  {
+    "plan": {
+      "plan": "p2",
+      "asof": 54,
+      "version": "r2",
+      "cutoff": 60,
+      "bandwidths": [
+        4,
+        8,
+        12
+      ],
+      "min_per_side": 28,
+      "max_unknown": 0.22,
+      "min_gain": 0.03,
+      "min_jump": 0.2,
+      "horizon": 14,
+      "active_on": 60,
+      "status": "pending"
+    },
+    "final_decision": "return_scope",
+    "reason_summary": "请求阈值 60 与规则实际阈值 56 不一致，邻域无对应证据，退回缩小范围或补证，不得以无显著差异批准扩张",
+    "scope_ok": false,
+    "scope_detail": {
+      "rule_scale": "composite-v2",
+      "plan_cutoff": "60",
+      "rule_cutoff": "56"
+    },
+    "submission": {
+      "asof": 54,
+      "n_mature": 36,
+      "n_mature_in_window": 13,
+      "band_verdicts": [
+        {
+          "bandwidth": 4,
+          "passed": false,
+          "failures": [
+            "min_per_side：每侧需 28，实际合格侧 3 / 不合格侧 2",
+            "max_unknown：上限 0.22，实际最大未结比例 1.000",
+            "min_gain：存在无已贴标签订单的一侧，无法估计效果"
+          ],
+          "comparison": {
+            "bandwidth": 4,
+            "above": {
+              "n": 3,
+              "mean": 0.0,
+              "unknown": 1,
+              "unknown_rate": 0.3333333333333333,
+              "shown": 2,
+              "show_rate": 0.6666666666666666,
+              "clusters": 3
+            },
+            "below": {
+              "n": 2,
+              "mean": null,
+              "unknown": 2,
+              "unknown_rate": 1.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 2
+            },
+            "diff": null,
+            "cluster_se": null,
+            "z": null,
+            "p_value": null,
+            "ci_low": null,
+            "ci_high": null,
+            "n_clusters": 2,
+            "show_jump": 0.6666666666666666,
+            "shown_group": {
+              "n": 1,
+              "mean": 0.0,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 1,
+              "show_rate": 1.0,
+              "clusters": 1
+            },
+            "notshown_group": {
+              "n": 1,
+              "mean": 0.0,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 1
+            },
+            "observed_gap": 0.0
+          },
+          "gate_values": {
+            "n_above": 3,
+            "n_below": 2,
+            "unknown_rate_above": 0.3333333333333333,
+            "unknown_rate_below": 1.0,
+            "show_rate_above": 0.6666666666666666,
+            "show_rate_below": 0.0,
+            "show_jump": 0.6666666666666666,
+            "itt_gain": null,
+            "p_value": null
+          },
+          "worst_case_gain": null,
+          "best_case_gain": null,
+          "label_flips": true
+        },
+        {
+          "bandwidth": 8,
+          "passed": false,
+          "failures": [
+            "min_per_side：每侧需 28，实际合格侧 4 / 不合格侧 5",
+            "max_unknown：上限 0.22，实际最大未结比例 1.000",
+            "min_gain：存在无已贴标签订单的一侧，无法估计效果"
+          ],
+          "comparison": {
+            "bandwidth": 8,
+            "above": {
+              "n": 4,
+              "mean": 0.0,
+              "unknown": 2,
+              "unknown_rate": 0.5,
+              "shown": 3,
+              "show_rate": 0.75,
+              "clusters": 4
+            },
+            "below": {
+              "n": 5,
+              "mean": null,
+              "unknown": 5,
+              "unknown_rate": 1.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 5
+            },
+            "diff": null,
+            "cluster_se": null,
+            "z": null,
+            "p_value": null,
+            "ci_low": null,
+            "ci_high": null,
+            "n_clusters": 2,
+            "show_jump": 0.75,
+            "shown_group": {
+              "n": 1,
+              "mean": 0.0,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 1,
+              "show_rate": 1.0,
+              "clusters": 1
+            },
+            "notshown_group": {
+              "n": 1,
+              "mean": 0.0,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 1
+            },
+            "observed_gap": 0.0
+          },
+          "gate_values": {
+            "n_above": 4,
+            "n_below": 5,
+            "unknown_rate_above": 0.5,
+            "unknown_rate_below": 1.0,
+            "show_rate_above": 0.75,
+            "show_rate_below": 0.0,
+            "show_jump": 0.75,
+            "itt_gain": null,
+            "p_value": null
+          },
+          "worst_case_gain": null,
+          "best_case_gain": null,
+          "label_flips": true
+        },
+        {
+          "bandwidth": 12,
+          "passed": false,
+          "failures": [
+            "min_per_side：每侧需 28，实际合格侧 7 / 不合格侧 6",
+            "max_unknown：上限 0.22，实际最大未结比例 1.000",
+            "min_gain：存在无已贴标签订单的一侧，无法估计效果"
+          ],
+          "comparison": {
+            "bandwidth": 12,
+            "above": {
+              "n": 7,
+              "mean": 0.0,
+              "unknown": 3,
+              "unknown_rate": 0.42857142857142855,
+              "shown": 4,
+              "show_rate": 0.5714285714285714,
+              "clusters": 7
+            },
+            "below": {
+              "n": 6,
+              "mean": null,
+              "unknown": 6,
+              "unknown_rate": 1.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 6
+            },
+            "diff": null,
+            "cluster_se": null,
+            "z": null,
+            "p_value": null,
+            "ci_low": null,
+            "ci_high": null,
+            "n_clusters": 4,
+            "show_jump": 0.5714285714285714,
+            "shown_group": {
+              "n": 2,
+              "mean": 0.0,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 2,
+              "show_rate": 1.0,
+              "clusters": 2
+            },
+            "notshown_group": {
+              "n": 2,
+              "mean": 0.0,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 2
+            },
+            "observed_gap": 0.0
+          },
+          "gate_values": {
+            "n_above": 7,
+            "n_below": 6,
+            "unknown_rate_above": 0.42857142857142855,
+            "unknown_rate_below": 1.0,
+            "show_rate_above": 0.5714285714285714,
+            "show_rate_below": 0.0,
+            "show_jump": 0.5714285714285714,
+            "itt_gain": null,
+            "p_value": null
+          },
+          "worst_case_gain": null,
+          "best_case_gain": null,
+          "label_flips": true
+        }
+      ],
+      "numeric_passed_bands": [],
+      "fully_passed_bands": [],
+      "view_decision": "hold",
+      "view_reason": "没有任何候选带宽同时满足覆盖、未结、跳变、效果幅度与标签敏感性要求",
+      "heaping": {
+        "even_only": true,
+        "near_below": 0,
+        "near_above": 1,
+        "near_ratio": Infinity
+      },
+      "covariate_balance_bw8": {
+        "price_band": [
+          2.0,
+          2.4
+        ],
+        "first_purchase": [
+          0.25,
+          0.2
+        ]
+      },
+      "merchant_overlap": [
+        9,
+        0
+      ],
+      "mismatched_receipts_visible": [],
+      "score_reviews_excluded": [],
+      "audit": [
+        "asof=54 带宽 4 未过闸：min_per_side：每侧需 28，实际合格侧 3 / 不合格侧 2",
+        "asof=54 带宽 4 未过闸：max_unknown：上限 0.22，实际最大未结比例 1.000",
+        "asof=54 带宽 4 未过闸：min_gain：存在无已贴标签订单的一侧，无法估计效果",
+        "asof=54 带宽 8 未过闸：min_per_side：每侧需 28，实际合格侧 4 / 不合格侧 5",
+        "asof=54 带宽 8 未过闸：max_unknown：上限 0.22，实际最大未结比例 1.000",
+        "asof=54 带宽 8 未过闸：min_gain：存在无已贴标签订单的一侧，无法估计效果",
+        "asof=54 带宽 12 未过闸：min_per_side：每侧需 28，实际合格侧 7 / 不合格侧 6",
+        "asof=54 带宽 12 未过闸：max_unknown：上限 0.22，实际最大未结比例 1.000",
+        "asof=54 带宽 12 未过闸：min_gain：存在无已贴标签订单的一侧，无法估计效果"
+      ]
+    },
+    "current": {
+      "asof": 91,
+      "n_mature": 280,
+      "n_mature_in_window": 80,
+      "band_verdicts": [
+        {
+          "bandwidth": 4,
+          "passed": false,
+          "failures": [
+            "min_per_side：每侧需 28，实际合格侧 17 / 不合格侧 13"
+          ],
+          "comparison": {
+            "bandwidth": 4,
+            "above": {
+              "n": 17,
+              "mean": 0.11764705882352941,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 13,
+              "show_rate": 0.7647058823529411,
+              "clusters": 13
+            },
+            "below": {
+              "n": 13,
+              "mean": 0.3076923076923077,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 1,
+              "show_rate": 0.07692307692307693,
+              "clusters": 13
+            },
+            "diff": -0.19004524886877833,
+            "cluster_se": 0.14951998496290858,
+            "z": -1.2710357676662611,
+            "p_value": 0.2037159243756388,
+            "ci_low": -0.4831044193960791,
+            "ci_high": 0.10301392165852247,
+            "n_clusters": 24,
+            "show_jump": 0.6877828054298643,
+            "shown_group": {
+              "n": 14,
+              "mean": 0.07142857142857142,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 14,
+              "show_rate": 1.0,
+              "clusters": 13
+            },
+            "notshown_group": {
+              "n": 16,
+              "mean": 0.3125,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 15
+            },
+            "observed_gap": -0.24107142857142858
+          },
+          "gate_values": {
+            "n_above": 17,
+            "n_below": 13,
+            "unknown_rate_above": 0.0,
+            "unknown_rate_below": 0.0,
+            "show_rate_above": 0.7647058823529411,
+            "show_rate_below": 0.07692307692307693,
+            "show_jump": 0.6877828054298643,
+            "itt_gain": 0.1900452488687783,
+            "p_value": 0.2037159243756388
+          },
+          "worst_case_gain": 0.1900452488687783,
+          "best_case_gain": 0.1900452488687783,
+          "label_flips": false
+        },
+        {
+          "bandwidth": 8,
+          "passed": true,
+          "failures": [],
+          "comparison": {
+            "bandwidth": 8,
+            "above": {
+              "n": 28,
+              "mean": 0.1111111111111111,
+              "unknown": 1,
+              "unknown_rate": 0.03571428571428571,
+              "shown": 23,
+              "show_rate": 0.8214285714285714,
+              "clusters": 21
+            },
+            "below": {
+              "n": 33,
+              "mean": 0.24242424242424243,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 4,
+              "show_rate": 0.12121212121212122,
+              "clusters": 25
+            },
+            "diff": -0.13131313131313135,
+            "cluster_se": 0.10395519338606238,
+            "z": -1.2631704779333992,
+            "p_value": 0.20652792000707132,
+            "ci_low": -0.33506531034981357,
+            "ci_high": 0.07243904772355089,
+            "n_clusters": 33,
+            "show_jump": 0.7002164502164502,
+            "shown_group": {
+              "n": 26,
+              "mean": 0.07692307692307693,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 26,
+              "show_rate": 1.0,
+              "clusters": 22
+            },
+            "notshown_group": {
+              "n": 34,
+              "mean": 0.2647058823529412,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 27
+            },
+            "observed_gap": -0.18778280542986425
+          },
+          "gate_values": {
+            "n_above": 28,
+            "n_below": 33,
+            "unknown_rate_above": 0.03571428571428571,
+            "unknown_rate_below": 0.0,
+            "show_rate_above": 0.8214285714285714,
+            "show_rate_below": 0.12121212121212122,
+            "show_jump": 0.7002164502164502,
+            "itt_gain": 0.13131313131313133,
+            "p_value": 0.20652792000707132
+          },
+          "worst_case_gain": 0.09956709956709958,
+          "best_case_gain": 0.13528138528138528,
+          "label_flips": false
+        },
+        {
+          "bandwidth": 12,
+          "passed": true,
+          "failures": [],
+          "comparison": {
+            "bandwidth": 12,
+            "above": {
+              "n": 40,
+              "mean": 0.16216216216216217,
+              "unknown": 3,
+              "unknown_rate": 0.075,
+              "shown": 28,
+              "show_rate": 0.7,
+              "clusters": 25
+            },
+            "below": {
+              "n": 40,
+              "mean": 0.275,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 4,
+              "show_rate": 0.1,
+              "clusters": 27
+            },
+            "diff": -0.11283783783783785,
+            "cluster_se": 0.08605013320268212,
+            "z": -1.3113034650633264,
+            "p_value": 0.18975525818711914,
+            "ci_low": -0.2814960989150948,
+            "ci_high": 0.055820423239419104,
+            "n_clusters": 36,
+            "show_jump": 0.6,
+            "shown_group": {
+              "n": 31,
+              "mean": 0.0967741935483871,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 31,
+              "show_rate": 1.0,
+              "clusters": 24
+            },
+            "notshown_group": {
+              "n": 46,
+              "mean": 0.30434782608695654,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 31
+            },
+            "observed_gap": -0.20757363253856945
+          },
+          "gate_values": {
+            "n_above": 40,
+            "n_below": 40,
+            "unknown_rate_above": 0.075,
+            "unknown_rate_below": 0.0,
+            "show_rate_above": 0.7,
+            "show_rate_below": 0.1,
+            "show_jump": 0.6,
+            "itt_gain": 0.11283783783783785,
+            "p_value": 0.18975525818711914
+          },
+          "worst_case_gain": 0.05000000000000002,
+          "best_case_gain": 0.12500000000000003,
+          "label_flips": false
+        }
+      ],
+      "numeric_passed_bands": [
+        8,
+        12
+      ],
+      "fully_passed_bands": [
+        8,
+        12
+      ],
+      "view_decision": "hold",
+      "view_reason": "仅带宽 [8, 12] 完全过闸，[4] 未过闸；合理带宽结论翻转",
+      "heaping": {
+        "even_only": true,
+        "near_below": 6,
+        "near_above": 4,
+        "near_ratio": 0.667
+      },
+      "covariate_balance_bw8": {
+        "price_band": [
+          2.1785714285714284,
+          1.9090909090909092
+        ],
+        "first_purchase": [
+          0.14285714285714285,
+          0.15151515151515152
+        ]
+      },
+      "merchant_overlap": [
+        33,
+        13
+      ],
+      "mismatched_receipts_visible": [],
+      "score_reviews_excluded": [],
+      "audit": [
+        "asof=91 带宽 4 未过闸：min_per_side：每侧需 28，实际合格侧 17 / 不合格侧 13",
+        "asof=91 带宽 8 效果幅度达数值门槛但聚类稳健检验 p=0.207，统计上不能区分于零，证据强度不足",
+        "asof=91 带宽 12 效果幅度达数值门槛但聚类稳健检验 p=0.190，统计上不能区分于零，证据强度不足"
+      ]
+    },
+    "evidence_corrections": [],
+    "late_arrivals": [],
+    "cutoff_jump_diagnostic": {
+      "asof": 91,
+      "cutoffs": {
+        "60": {
+          "4": {
+            "n_above": 17,
+            "n_below": 11,
+            "show_above": 0.9411764705882353,
+            "show_below": 0.6363636363636364,
+            "jump": 0.3048128342245989
+          },
+          "8": {
+            "n_above": 29,
+            "n_below": 24,
+            "show_above": 0.7241379310344828,
+            "show_below": 0.3333333333333333,
+            "jump": 0.39080459770114945
+          },
+          "12": {
+            "n_above": 50,
+            "n_below": 44,
+            "show_above": 0.76,
+            "show_below": 0.25,
+            "jump": 0.51
+          }
+        },
+        "56": {
+          "4": {
+            "n_above": 17,
+            "n_below": 13,
+            "show_above": 0.7647058823529411,
+            "show_below": 0.07692307692307693,
+            "jump": 0.6877828054298643
+          },
+          "8": {
+            "n_above": 28,
+            "n_below": 33,
+            "show_above": 0.8214285714285714,
+            "show_below": 0.12121212121212122,
+            "jump": 0.7002164502164502
+          },
+          "12": {
+            "n_above": 40,
+            "n_below": 40,
+            "show_above": 0.7,
+            "show_below": 0.1,
+            "jump": 0.6
+          }
+        }
+      },
+      "rule_cutoff": 56,
+      "requested_cutoff": 60
+    },
+    "audit": [
+      "范围退回：计划目标 cutoff=60 与 r2 规则实际 cutoff=56 不一致；资格跳变由规则在 56 处产生，60 分附近不存在该规则制造的自然对照。",
+      "当前全量证据（asof=91）：真实 cutoff 56 处展示率跳变 bw4 跳变 0.688 / bw8 跳变 0.700 / bw12 跳变 0.600，请求 cutoff 60 处仅 bw4 跳变 0.305 / bw8 跳变 0.391 / bw12 跳变 0.510；请求阈值缺乏规则驱动的展示跳变支持。"
+    ]
+  },
+  {
+    "plan": {
+      "plan": "p0",
+      "asof": 44,
+      "version": "r1",
+      "cutoff": 50,
+      "bandwidths": [
+        4,
+        8
+      ],
+      "min_per_side": 22,
+      "max_unknown": 0.24,
+      "min_gain": 0.02,
+      "min_jump": 0.15,
+      "horizon": 14,
+      "active_on": 46,
+      "status": "executed"
+    },
+    "final_decision": "retained",
+    "reason_summary": "已执行的旧规则动作保留；重算证据留痕，不改变既有处置",
+    "scope_ok": true,
+    "scope_detail": {
+      "rule_scale": "raw-v1",
+      "plan_cutoff": "50",
+      "rule_cutoff": "50"
+    },
+    "submission": {
+      "asof": 44,
+      "n_mature": 600,
+      "n_mature_in_window": 278,
+      "band_verdicts": [
+        {
+          "bandwidth": 4,
+          "passed": false,
+          "failures": [
+            "min_gain：争议下降幅度需 >= 0.02，ITT 实际 -0.040"
+          ],
+          "comparison": {
+            "bandwidth": 4,
+            "above": {
+              "n": 81,
+              "mean": 0.17647058823529413,
+              "unknown": 13,
+              "unknown_rate": 0.16049382716049382,
+              "shown": 65,
+              "show_rate": 0.8024691358024691,
+              "clusters": 38
+            },
+            "below": {
+              "n": 53,
+              "mean": 0.13636363636363635,
+              "unknown": 9,
+              "unknown_rate": 0.16981132075471697,
+              "shown": 1,
+              "show_rate": 0.018867924528301886,
+              "clusters": 28
+            },
+            "diff": 0.04010695187165769,
+            "cluster_se": 0.07155966269312598,
+            "z": 0.5604687104752153,
+            "p_value": 0.5751597761963108,
+            "ci_low": -0.10014998700686922,
+            "ci_high": 0.1803638907501846,
+            "n_clusters": 40,
+            "show_jump": 0.7836012112741673,
+            "shown_group": {
+              "n": 55,
+              "mean": 0.14545454545454545,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 55,
+              "show_rate": 1.0,
+              "clusters": 32
+            },
+            "notshown_group": {
+              "n": 57,
+              "mean": 0.17543859649122806,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 29
+            },
+            "observed_gap": -0.029984051036682613
+          },
+          "gate_values": {
+            "n_above": 81,
+            "n_below": 53,
+            "unknown_rate_above": 0.16049382716049382,
+            "unknown_rate_below": 0.16981132075471697,
+            "show_rate_above": 0.8024691358024691,
+            "show_rate_below": 0.018867924528301886,
+            "show_jump": 0.7836012112741673,
+            "itt_gain": -0.040106951871657776,
+            "p_value": 0.5751597761963108
+          },
+          "worst_case_gain": -0.19543442813883063,
+          "best_case_gain": 0.13487071977638015,
+          "label_flips": true
+        },
+        {
+          "bandwidth": 8,
+          "passed": true,
+          "failures": [],
+          "comparison": {
+            "bandwidth": 8,
+            "above": {
+              "n": 160,
+              "mean": 0.18181818181818182,
+              "unknown": 28,
+              "unknown_rate": 0.175,
+              "shown": 128,
+              "show_rate": 0.8,
+              "clusters": 40
+            },
+            "below": {
+              "n": 118,
+              "mean": 0.26,
+              "unknown": 18,
+              "unknown_rate": 0.15254237288135594,
+              "shown": 6,
+              "show_rate": 0.05084745762711865,
+              "clusters": 40
+            },
+            "diff": -0.07818181818181824,
+            "cluster_se": 0.05790599341911152,
+            "z": -1.3501507109282198,
+            "p_value": 0.17696764475231586,
+            "ci_low": -0.1916775652832768,
+            "ci_high": 0.03531392891964033,
+            "n_clusters": 40,
+            "show_jump": 0.7491525423728814,
+            "shown_group": {
+              "n": 108,
+              "mean": 0.16666666666666666,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 108,
+              "show_rate": 1.0,
+              "clusters": 38
+            },
+            "notshown_group": {
+              "n": 124,
+              "mean": 0.25806451612903225,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 38
+            },
+            "observed_gap": -0.0913978494623656
+          },
+          "gate_values": {
+            "n_above": 160,
+            "n_below": 118,
+            "unknown_rate_above": 0.175,
+            "unknown_rate_below": 0.15254237288135594,
+            "show_rate_above": 0.8,
+            "show_rate_below": 0.05084745762711865,
+            "show_jump": 0.7491525423728814,
+            "itt_gain": 0.07818181818181819,
+            "p_value": 0.17696764475231586
+          },
+          "worst_case_gain": -0.10466101694915256,
+          "best_case_gain": 0.2228813559322034,
+          "label_flips": true
+        }
+      ],
+      "numeric_passed_bands": [
+        8
+      ],
+      "fully_passed_bands": [],
+      "view_decision": "hold",
+      "view_reason": "带宽 [8] 数值过闸但未结标签敏感性翻转，其余带宽未过闸；未知标签可使动作建议翻转，不得切换",
+      "heaping": {
+        "even_only": false,
+        "near_below": 27,
+        "near_above": 36,
+        "near_ratio": 1.333
+      },
+      "covariate_balance_bw8": {
+        "price_band": [
+          2.0875,
+          2.016949152542373
+        ],
+        "first_purchase": [
+          0.18125,
+          0.2288135593220339
+        ]
+      },
+      "merchant_overlap": [
+        40,
+        40
+      ],
+      "mismatched_receipts_visible": [
+        "o0088"
+      ],
+      "score_reviews_excluded": [],
+      "audit": [
+        "回执版本异常：o0088 在 asof=44 的有效回执标注为 r2（下单版本 r1）；按'版本不符≠无展示'保留订单，shown=1",
+        "asof=44 带宽 4 未过闸：min_gain：争议下降幅度需 >= 0.02，ITT 实际 -0.040",
+        "asof=44 带宽 8 数值闸口已过，但未结标签极端赋值下增益低至 -0.105（门槛 0.02），未知标签可使建议翻转"
+      ]
+    },
+    "current": {
+      "asof": 91,
+      "n_mature": 680,
+      "n_mature_in_window": 310,
+      "band_verdicts": [
+        {
+          "bandwidth": 4,
+          "passed": false,
+          "failures": [
+            "min_gain：争议下降幅度需 >= 0.02，ITT 实际 -0.061"
+          ],
+          "comparison": {
+            "bandwidth": 4,
+            "above": {
+              "n": 90,
+              "mean": 0.20689655172413793,
+              "unknown": 3,
+              "unknown_rate": 0.03333333333333333,
+              "shown": 72,
+              "show_rate": 0.8,
+              "clusters": 38
+            },
+            "below": {
+              "n": 60,
+              "mean": 0.14545454545454545,
+              "unknown": 5,
+              "unknown_rate": 0.08333333333333333,
+              "shown": 1,
+              "show_rate": 0.016666666666666666,
+              "clusters": 29
+            },
+            "diff": 0.06144200626959245,
+            "cluster_se": 0.05950851324595819,
+            "z": 1.0324910322602554,
+            "p_value": 0.30184214653525676,
+            "ci_low": -0.05519467969248559,
+            "ci_high": 0.1780786922316705,
+            "n_clusters": 40,
+            "show_jump": 0.7833333333333333,
+            "shown_group": {
+              "n": 71,
+              "mean": 0.16901408450704225,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 71,
+              "show_rate": 1.0,
+              "clusters": 37
+            },
+            "notshown_group": {
+              "n": 71,
+              "mean": 0.19718309859154928,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 31
+            },
+            "observed_gap": -0.028169014084507032
+          },
+          "gate_values": {
+            "n_above": 90,
+            "n_below": 60,
+            "unknown_rate_above": 0.03333333333333333,
+            "unknown_rate_below": 0.08333333333333333,
+            "show_rate_above": 0.8,
+            "show_rate_below": 0.016666666666666666,
+            "show_jump": 0.7833333333333333,
+            "itt_gain": -0.06144200626959248,
+            "p_value": 0.30184214653525676
+          },
+          "worst_case_gain": -0.1,
+          "best_case_gain": 0.016666666666666663,
+          "label_flips": true
+        },
+        {
+          "bandwidth": 8,
+          "passed": true,
+          "failures": [],
+          "comparison": {
+            "bandwidth": 8,
+            "above": {
+              "n": 178,
+              "mean": 0.19653179190751446,
+              "unknown": 5,
+              "unknown_rate": 0.028089887640449437,
+              "shown": 143,
+              "show_rate": 0.8033707865168539,
+              "clusters": 40
+            },
+            "below": {
+              "n": 132,
+              "mean": 0.25806451612903225,
+              "unknown": 8,
+              "unknown_rate": 0.06060606060606061,
+              "shown": 6,
+              "show_rate": 0.045454545454545456,
+              "clusters": 40
+            },
+            "diff": -0.06153272422151779,
+            "cluster_se": 0.05597202746957869,
+            "z": -1.0993477814424606,
+            "p_value": 0.2716163983014348,
+            "ci_low": -0.17123789806189202,
+            "ci_high": 0.048172449618856444,
+            "n_clusters": 40,
+            "show_jump": 0.7579162410623085,
+            "shown_group": {
+              "n": 145,
+              "mean": 0.1793103448275862,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 145,
+              "show_rate": 1.0,
+              "clusters": 40
+            },
+            "notshown_group": {
+              "n": 152,
+              "mean": 0.2631578947368421,
+              "unknown": 0,
+              "unknown_rate": 0.0,
+              "shown": 0,
+              "show_rate": 0.0,
+              "clusters": 39
+            },
+            "observed_gap": -0.08384754990925589
+          },
+          "gate_values": {
+            "n_above": 178,
+            "n_below": 132,
+            "unknown_rate_above": 0.028089887640449437,
+            "unknown_rate_below": 0.06060606060606061,
+            "show_rate_above": 0.8033707865168539,
+            "show_rate_below": 0.045454545454545456,
+            "show_jump": 0.7579162410623085,
+            "itt_gain": 0.06153272422151779,
+            "p_value": 0.2716163983014348
+          },
+          "worst_case_gain": 0.023323118828736805,
+          "best_case_gain": 0.11201906707524686,
+          "label_flips": false
+        }
+      ],
+      "numeric_passed_bands": [
+        8
+      ],
+      "fully_passed_bands": [
+        8
+      ],
+      "view_decision": "hold",
+      "view_reason": "仅带宽 [8] 完全过闸，[4] 未过闸；合理带宽结论翻转",
+      "heaping": {
+        "even_only": false,
+        "near_below": 31,
+        "near_above": 41,
+        "near_ratio": 1.323
+      },
+      "covariate_balance_bw8": {
+        "price_band": [
+          2.0786516853932584,
+          2.037878787878788
+        ],
+        "first_purchase": [
+          0.17415730337078653,
+          0.22727272727272727
+        ]
+      },
+      "merchant_overlap": [
+        40,
+        40
+      ],
+      "mismatched_receipts_visible": [],
+      "score_reviews_excluded": [
+        "o0029",
+        "o0088"
+      ],
+      "audit": [
+        "事后复核分数 o0029、o0088 仅供后续业务处置，未改变任何订单的资格侧或窗口归属",
+        "asof=91 带宽 4 未过闸：min_gain：争议下降幅度需 >= 0.02，ITT 实际 -0.061",
+        "asof=91 带宽 8 效果幅度达数值门槛但聚类稳健检验 p=0.272，统计上不能区分于零，证据强度不足"
+      ]
+    },
+    "evidence_corrections": [
+      {
+        "order": "o0088",
+        "table": "receipts",
+        "revision_before": 1,
+        "revision_after": 2,
+        "known_after": 53,
+        "description": "回执由 rev1（版本 r2，shown=1，reason=shown）订正为 rev2（版本 r1，shown=1，reason=shown）；订单资格侧不变（r1 分数 53≥ cutoff 50）",
+        "alters_estimate": false
+      }
+    ],
+    "late_arrivals": [
+      {
+        "order": "o0023",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0027",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0028",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0030",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0032",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0033",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0062",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0063",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0065",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0066",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0094",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0095",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0098",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0100",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0101",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0127",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0133",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0134",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0163",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0166",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0167",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0168",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0198",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0200",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0203",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=appeal）；该订单位于不合格侧，标签状态发生修订，已按最新口径重算",
+        "alters_estimate": false
+      },
+      {
+        "order": "o0230",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0233",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0236",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0237",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0266",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0267",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0268",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0271",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 55,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0295",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0302",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0335",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0338",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0339",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0365",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0366",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0369",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0372",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0373",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0403",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0404",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0431",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0439",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0470",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0471",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0475",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0502",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0503",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0507",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0538",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0541",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0571",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0573",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于不合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0574",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 51,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0604",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0606",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0638",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=appeal）；该订单位于合格侧，标签状态发生修订，已按最新口径重算",
+        "alters_estimate": false
+      },
+      {
+        "order": "o0639",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0641",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0643",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 49,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0674",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 45,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0675",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 47,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=clear）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      },
+      {
+        "order": "o0678",
+        "table": "outcomes",
+        "revision_before": 0,
+        "revision_after": 1,
+        "known_after": 53,
+        "description": "售后由 rev0（state=无记录）订正为 rev1（state=dispute）；该订单位于合格侧，从未结转为已贴标签，未结比例与争议率均受影响",
+        "alters_estimate": true
+      }
+    ],
+    "cutoff_jump_diagnostic": null,
+    "audit": [
+      "证据订正（receipts）：o0088 回执由 rev1（版本 r2，shown=1，reason=shown）订正为 rev2（版本 r1，shown=1，reason=shown）；订单资格侧不变（r1 分数 53≥ cutoff 50）；影响：不改变展示与资格，仅消除数据质量标记",
+      "另有 67 条 rev1 记录在提交 asof 之后才到达（资料各自按时到达的正常情形），已由成熟度窗口与 asof 视图处理，不计为失效证据。",
+      "回执版本异常：o0088 在 asof=44 的有效回执标注为 r2（下单版本 r1）；按'版本不符≠无展示'保留订单，shown=1",
+      "asof=44 带宽 4 未过闸：min_gain：争议下降幅度需 >= 0.02，ITT 实际 -0.040",
+      "asof=44 带宽 8 数值闸口已过，但未结标签极端赋值下增益低至 -0.105（门槛 0.02），未知标签可使建议翻转",
+      "事后复核分数 o0029、o0088 仅供后续业务处置，未改变任何订单的资格侧或窗口归属",
+      "asof=91 带宽 4 未过闸：min_gain：争议下降幅度需 >= 0.02，ITT 实际 -0.061",
+      "asof=91 带宽 8 效果幅度达数值门槛但聚类稳健检验 p=0.272，统计上不能区分于零，证据强度不足",
+      "计划 p0 已执行（active_on=46）：旧规则动作保留，双视图重算仅作证据留痕，不产生切换或回滚。"
+    ]
+  }
+]
